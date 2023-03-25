@@ -3,7 +3,7 @@ import minimist from "minimist";
 import express from "express";
 
 import { rps } from "./lib/rpsls.js";
-import { rpsls } from "./lib/rpsls.js";
+import { rpsls } from "./lib/bin/rpsls-cli.js";
 
 var args = minimist(process.argv.slice(2));
 const PORT = args.port || 5000;
