@@ -4,6 +4,7 @@ import express from "express";
 
 
 export { default } from "./lib/rpsls.js";
+import {rps, rpsls} from "./lib/rpsls.js";
 
 var args = minimist(process.argv.slice(2));
 const PORT = args.port || 5000;
