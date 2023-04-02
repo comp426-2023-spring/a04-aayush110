@@ -53,6 +53,6 @@ app.get("*", (req, res) => {
     res.status(404).send("404 NOT FOUND")
 });
 
-app.listen(PORT, () => {
-    console.log('Server listening on port ${PORT}');
+app.listen(port, () => {
+    console.log('Server listening on port ${port}');
 });
