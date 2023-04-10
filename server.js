@@ -13,7 +13,7 @@ const port = argv["port"] || 5000
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.listen(port);
+
 
 app.get("/app/", (req, res) => {
     res.status(200).send("200 OK");
@@ -23,7 +23,7 @@ app.get("/app/rps/", (req, res) => {
     res.status(200).send(JSON.stringify(rps()));
 });
 
-app.get("app/rpsls/", (req, res) => {
+app.get("/app/rpsls/", (req, res) => {
     res.status(200).send(JSON.stringify(rpsls()));
 });
 
@@ -35,7 +35,7 @@ app.post("/app/rps/play/", (req, res) => {
     res.status(200).send(JSON.stringify(rps(req.body.shot)));
 });
 
-app.get("app/rpsls/play/", (req, res) => {
+app.get("/app/rpsls/play/", (req, res) => {
     res.status(200).send(JSON.stringify(rpsls(req.query.shot)));
 });
 
